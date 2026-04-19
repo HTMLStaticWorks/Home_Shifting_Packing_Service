@@ -112,12 +112,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // Header scroll effect
   const header = document.querySelector('.site-header');
   if (header) {
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        header.style.boxShadow = 'var(--shadow)';
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        header.classList.add('scrolled');
       } else {
-        header.style.boxShadow = 'none';
+        header.classList.remove('scrolled');
       }
-    });
+    };
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial check
   }
 });
