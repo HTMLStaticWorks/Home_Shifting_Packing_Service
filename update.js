@@ -56,7 +56,7 @@ files.forEach(file => {
       </nav>
       <div class="header-actions">
         <button class="icon-btn" id="theme-toggle"><i data-lucide="moon"></i></button>
-        <button class="icon-btn" id="rtl-toggle"><i data-lucide="align-right"></i></button>
+        <button class="icon-btn rtl-toggle-btn" id="rtl-toggle"><i data-lucide="align-right"></i></button>
         <a href="login.html" class="nav-link login-btn" style="margin-inline-end:0.5rem;">Login</a>
         <a href="shop.html" class="btn btn-secondary">Shop Now</a>
         <a href="subscription.html" class="btn btn-primary">Subscribe</a>
@@ -85,7 +85,7 @@ files.forEach(file => {
     <div class="mobile-actions">
       <div style="display:flex; gap:1rem; margin-bottom:1rem; padding-left:1rem;">
         <button class="icon-btn" id="mobile-theme-toggle" style="background:var(--border-color);"><i data-lucide="moon"></i></button>
-        <button class="icon-btn" id="mobile-rtl-toggle" style="background:var(--border-color);"><i data-lucide="align-right"></i></button>
+        <button class="icon-btn rtl-toggle-btn" id="mobile-rtl-toggle" style="background:var(--border-color);"><i data-lucide="align-right"></i></button>
       </div>
       <a href="login.html" class="btn btn-secondary text-center">Login</a>
       <a href="shop.html" class="btn btn-secondary text-center">Shop Now</a>
