@@ -75,8 +75,7 @@
       text-align: center;
       transition: var(--transition);
       background: var(--card-bg);
-      flex: 1 1 280px;
-      max-width: 380px;
+      flex: 0 1 380px;
     }
 
     .flavor-profile-card:hover {
@@ -149,14 +148,7 @@
       <a href="collections.html">Collections</a>
       <a href="contact.html">Contact</a>
       <a href="dashboard.html">Dashboard</a>
-    </div>
-    <div class="mobile-actions">
-      <div style="display:flex; gap:1rem; margin-bottom:1rem; justify-content:center;">
-        <button class="icon-btn" id="mobile-theme-toggle" style="background:var(--border-color);"><i
-            data-lucide="moon"></i></button>
-        <button class="icon-btn rtl-toggle-btn" id="mobile-rtl-toggle" style="background:var(--border-color);">RTL</button>
-      </div>
-      <a href="login.html" class="btn btn-secondary text-center" style="width:100%;">Login</a>
+      <a href="login.html" class="mobile-login-btn">Login</a>
     </div>
   </div>
 
@@ -239,7 +231,7 @@
       <div class="container">
         <h2 class="section-title fade-in">Chef's Reserve Line</h2>
         <div class="product-grid" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2.5rem;">
-          <div class="product-card fade-in" style="flex: 1 1 300px; max-width: 400px;">
+          <div class="product-card fade-in" style="flex: 0 1 400px;">
             <div class="product-img"><img
                 src="https://images.unsplash.com/photo-1559561853-08451507cbe7?q=80&w=2106&auto=format&fit=crop"
                 alt="Reserve Blue"></div>
@@ -249,7 +241,7 @@
               <a href="shop.html" class="btn btn-secondary" style="width:100%;">View Details</a>
             </div>
           </div>
-          <div class="product-card fade-in" style="transition-delay:0.1s; flex: 1 1 300px; max-width: 400px;">
+          <div class="product-card fade-in" style="transition-delay:0.1s; flex: 0 1 400px;">
             <div class="product-img"><img src="https://images.pexels.com/photos/15510946/pexels-photo-15510946.jpeg"
                 alt="Reserve Camembert"></div>
             <div class="product-info">
@@ -258,7 +250,7 @@
               <a href="shop.html" class="btn btn-secondary" style="width:100%;">View Details</a>
             </div>
           </div>
-          <div class="product-card fade-in" style="transition-delay:0.2s; flex: 1 1 300px; max-width: 400px;">
+          <div class="product-card fade-in" style="transition-delay:0.2s; flex: 0 1 400px;">
             <div class="product-img"><img src="https://images.pexels.com/photos/15754940/pexels-photo-15754940.jpeg"
                 alt="Reserve Ash"></div>
             <div class="product-info">
@@ -273,21 +265,21 @@
 
     <!-- Section 5: Brand Story -->
     <section
-      style="background:var(--card-bg); border-top:1px solid var(--border-color); border-bottom:1px solid var(--border-color);">
-      <div class="container" style="padding: 6rem 2rem 8rem 2rem; text-align:center;">
+      style="background:var(--card-bg); border-top:1px solid var(--border-color); border-bottom:1px solid var(--border-color); padding: 6rem 0 4rem 0;">
+      <div class="container" style="text-align:center;">
         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--secondary-color)" stroke-width="2.5"
           stroke-linecap="round" stroke-linejoin="round" class="fade-in mb-3" style="margin:0 auto;">
           <circle cx="12" cy="12" r="10" />
           <path d="M8 12h8" />
           <path d="M12 8v8" />
         </svg>
-        <h2 class="section-title fade-in" style="margin-bottom:2rem;">Born from Tradition,<br>Crafted for Tomorrow</h2>
+        <h2 class="section-title fade-in">Born from Tradition,<br>Crafted for Tomorrow</h2>
         <p style="max-width:700px; margin:0 auto; font-size:1.1rem; line-height:1.8;" class="fade-in">We believe that
           abstaining from dairy shouldn't mean compromising on craftsmanship. Our founders traveled to the finest
           creameries in France to study the art of affinage (cheese aging), adapting centuries-old techniques to
           ethically sourced cashew and almond bases.</p>
         <a href="about.html" class="btn btn-secondary fade-in"
-          style="margin-top:3rem; margin-bottom:1rem; display:inline-flex;">Our Full Story</a>
+          style="margin-top:3rem; margin-bottom:4rem; display:inline-flex;">Our Full Story</a>
       </div>
     </section>
 
