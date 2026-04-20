@@ -427,6 +427,24 @@ img {
   display: none;
 }
 
+.hide-desktop {
+  display: none !important;
+}
+
+.hide-mobile {
+  display: flex !important;
+}
+
+@media (max-width: 1024px) {
+  .hide-desktop {
+    display: flex !important;
+  }
+
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
 /* Main Spacing */
 main {
   margin-top: var(--header-height);

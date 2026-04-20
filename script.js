@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Theme Toggle
-  const themeToggles = document.querySelectorAll('#theme-toggle, #mobile-theme-toggle, #header-theme-toggle');
+  const themeToggles = document.querySelectorAll('#theme-toggle, #mobile-theme-toggle, #header-theme-toggle, #sidebar-theme-toggle');
   const toggleTheme = () => {
     const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // RTL Toggle
-  const rtlToggles = document.querySelectorAll('#rtl-toggle, #mobile-rtl-toggle, #header-rtl-toggle');
+  const rtlToggles = document.querySelectorAll('#rtl-toggle, #mobile-rtl-toggle, #header-rtl-toggle, #sidebar-rtl-toggle');
   const toggleRTL = () => {
     const currentDir = document.documentElement.getAttribute('dir');
     const newDir = currentDir === 'rtl' ? 'ltr' : 'rtl';
