@@ -23,7 +23,7 @@
   --font-body: 'Outfit', sans-serif;
 
   /* Spacing & Layout */
-  --section-padding: 5rem 2rem;
+  --section-padding: 3rem 2rem;
   --container-width: 1200px;
   --border-radius: 8px;
   --transition: all 0.3s ease;
@@ -160,7 +160,7 @@ img {
 .section-title {
   font-size: 2.5rem;
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   position: relative;
 }
 
@@ -953,22 +953,27 @@ main {
 
 /* Featured Cheeses */
 .product-grid {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  justify-content: center !important;
-  gap: 2rem;
-  padding: var(--section-padding);
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 3rem 2rem;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
   .product-grid {
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 2.5rem 1.5rem;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .product-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 2rem 1.25rem;
   }
 }
 
@@ -981,7 +986,7 @@ main {
   transition: var(--transition);
   display: flex;
   flex-direction: column;
-  flex: 0 1 400px;
+  width: 100%;
 }
 
 .product-card:hover {
