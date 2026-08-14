@@ -4,13 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cheevo | Home Premium</title>
-  <meta name="description" content="A premium experience of artisanal plant-based cheeses.">
+  <title>MoveEase | Premium Relocation</title>
+  <meta name="description" content="A premium home shifting and packing experience. Safe, reliable, and stress-free.">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/svg+xml" href="logomark.svg">
   <style>
     .hero-2 {
       height: 90vh;
+      min-height: 600px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -25,7 +26,7 @@
       inset: 0;
       width: 100%;
       height: 100%;
-      background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('hero-image.png');
+      background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?q=80&w=1920&auto=format&fit=crop');
       background-size: cover;
       background-position: center;
       z-index: 0;
@@ -81,6 +82,7 @@
     .flavor-profile-card:hover {
       background: var(--primary-color);
       color: #fff;
+      border-color: var(--primary-color);
     }
 
     .flavor-profile-card:hover .fp-icon {
@@ -109,15 +111,15 @@
   <header class="site-header">
     <div class="header-container">
       <a href="index.html" class="logo">
-        <svg class="logo-icon-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M50 12C29.0132 12 12 29.0132 12 50C12 70.9868 29.0132 88 50 88C70.9868 88 88 70.9868 88 50C88 41.5 85.5 33.5 81 27" stroke="currentColor" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/><path d="M50 50L83 17" stroke="currentColor" stroke-width="11" stroke-linecap="round"/><path d="M58 24C58 24 76 24 76 42C76 60 58 60 58 60C58 45 42 50 50 50" fill="currentColor"/><circle cx="50" cy="50" r="5" fill="currentColor"/></svg> <span class="logo-text">Cheevo</span>
+        <svg class="logo-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h6M3 12h4M1 16h5" /><path d="M9 6h9v10H9z" /><path d="M18 8h3l2 3v5h-5z" /><circle cx="12" cy="18" r="2" /><circle cx="20" cy="18" r="2" /></svg> <span class="logo-text">MoveEase</span>
       </a>
       <nav class="nav-menu">
         <a href="index.html" class="nav-link">Home 1</a>
         <a href="home-2.html" class="nav-link active">Home 2</a>
         <a href="about.html" class="nav-link">About</a>
-        <a href="shop.html" class="nav-link">Shop</a>
-        <a href="subscription.html" class="nav-link">Subscription</a>
-        <a href="collections.html" class="nav-link">Collections</a>
+        <a href="shop.html" class="nav-link">Services</a>
+        <a href="subscription.html" class="nav-link">Packages</a>
+        <a href="collections.html" class="nav-link">Service Areas</a>
         <a href="contact.html" class="nav-link">Contact</a>
         <a href="dashboard.html" class="nav-link">Dashboard</a>
       </nav>
@@ -135,7 +137,7 @@
   <div class="mobile-menu-overlay" id="mobile-menu">
     <div class="mobile-menu-header">
       <a href="index.html" class="logo">
-        <svg class="logo-icon-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M50 12C29.0132 12 12 29.0132 12 50C12 70.9868 29.0132 88 50 88C70.9868 88 88 70.9868 88 50C88 41.5 85.5 33.5 81 27" stroke="currentColor" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/><path d="M50 50L83 17" stroke="currentColor" stroke-width="11" stroke-linecap="round"/><path d="M58 24C58 24 76 24 76 42C76 60 58 60 58 60C58 45 42 50 50 50" fill="currentColor"/><circle cx="50" cy="50" r="5" fill="currentColor"/></svg> <span class="logo-text">Cheevo</span>
+        <svg class="logo-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h6M3 12h4M1 16h5" /><path d="M9 6h9v10H9z" /><path d="M18 8h3l2 3v5h-5z" /><circle cx="12" cy="18" r="2" /><circle cx="20" cy="18" r="2" /></svg> <span class="logo-text">MoveEase</span>
       </a>
       <button class="icon-btn" id="close-menu"><i data-lucide="x"></i></button>
     </div>
@@ -143,9 +145,9 @@
       <a href="index.html">Home 1</a>
       <a href="home-2.html" class="active">Home 2</a>
       <a href="about.html">About</a>
-      <a href="shop.html">Shop</a>
-      <a href="subscription.html">Subscription</a>
-      <a href="collections.html">Collections</a>
+      <a href="shop.html">Services</a>
+      <a href="subscription.html">Packages</a>
+      <a href="collections.html">Service Areas</a>
       <a href="contact.html">Contact</a>
       <a href="dashboard.html">Dashboard</a>
       <a href="login.html" class="mobile-login-btn">Login</a>
@@ -157,105 +159,98 @@
     <section class="hero-2">
       <div class="hero-2-img"></div>
       <div class="hero-2-content fade-in">
-        <p style="letter-spacing: 4px; text-transform: uppercase; font-size: 0.9rem; margin-bottom:1rem;">The Pinnacle
-          of Plant-Based</p>
-        <h1 class="hero-2-title">Refined. Cultured.<br>Exceptional.</h1>
-        <p style="margin: 2rem auto; font-size: 1.2rem; max-width: 600px; color:#ddd;">Elevate your culinary experience
-          with perfectly aged, dairy-free masterpieces.</p>
+        <p style="letter-spacing: 4px; text-transform: uppercase; font-size: 0.9rem; margin-bottom:1rem;">The Pinnacle of Premium Moves</p>
+        <h1 class="hero-2-title">Secure. Professional.<br>Seamless.</h1>
+        <p style="margin: 2rem auto; font-size: 1.2rem; max-width: 600px; color:#ddd;">Experience stress-free household relocation with certified shifting professionals.</p>
         <div class="hero-2-actions">
-          <a href="shop.html" class="btn btn-primary">Explore The Cellar</a>
-          <a href="collections.html" class="btn btn-secondary" style="border-color:#fff; color:#fff;">Discover
-            Collections</a>
+          <a href="contact.html" class="btn btn-primary">Get Free Quote</a>
+          <a href="dashboard.html" class="btn btn-outline-white">Book Your Move</a>
         </div>
       </div>
     </section>
 
-    <!-- Section 2: Flavor Profiles Grid -->
+    <!-- Section 2: Core Shifting Pillars -->
     <section style="padding: 3rem 2rem;">
       <div class="container">
-        <h2 class="section-title fade-in">Distinct Flavor Profiles</h2>
+        <h2 class="section-title fade-in">Our Moving Pillars</h2>
         <div style="display:flex; flex-wrap:wrap; justify-content:center; gap: 2rem;">
           <div class="flavor-profile-card fade-in">
-            <img src="https://images.pexels.com/photos/3365558/pexels-photo-3365558.jpeg" alt="Smoked and Nutty"
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=600&auto=format&fit=crop" alt="Fully Insured"
               style="width:100%; height:180px; object-fit:cover; border-radius:var(--border-radius); margin-bottom:1.5rem;">
-            <h3 class="mb-2">Smoked & Nutty</h3>
-            <p>Deep, rich hickory notes balanced with creamy almond and cashew bases.</p>
+            <h3 class="mb-2">Fully Bonded & Insured</h3>
+            <p>Comprehensive transit insurance covering all your household goods for complete peace of mind.</p>
           </div>
           <div class="flavor-profile-card fade-in" style="transition-delay:0.1s;">
-            <img src="https://images.pexels.com/photos/29578903/pexels-photo-29578903.jpeg" alt=" Soft and Creamy"
+            <img src="https://images.unsplash.com/photo-1530587191325-3db32d826c18?q=80&w=600&auto=format&fit=crop" alt="Premium Packing"
               style="width:100%; height:180px; object-fit:cover; border-radius:var(--border-radius); margin-bottom:1.5rem;">
-            <h3 class="mb-2">Soft & Creamy</h3>
-            <p>Delicate bloomy rinds with sumptuously smooth interiors like our Camembert.</p>
+            <h3 class="mb-2">Premium Packing Materials</h3>
+            <p>Multi-layer bubble wrap, heavy-duty corrugated boxes, and tailored crating for fragile items.</p>
           </div>
           <div class="flavor-profile-card fade-in" style="transition-delay:0.2s;">
-            <img src="https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?q=80&w=600&auto=format&fit=crop"
-              alt="Sharp and Tangy"
+            <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=600&auto=format&fit=crop" alt="On-Time Delivery"
               style="width:100%; height:180px; object-fit:cover; border-radius:var(--border-radius); margin-bottom:1.5rem;">
-            <h3 class="mb-2">Sharp & Tangy</h3>
-            <p>Aged varieties boasting sharp bites, perfect for elevating robust dishes.</p>
+            <h3 class="mb-2">On-Time Shifting</h3>
+            <p>Punctual arrivals and strict adherence to moving timelines across local areas and major cities.</p>
           </div>
           <div class="flavor-profile-card fade-in" style="transition-delay:0.3s;">
-            <img src="https://images.unsplash.com/photo-1559561853-08451507cbe7?q=80&w=600&auto=format&fit=crop"
-              alt="Earthy and Truffled"
+            <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=600&auto=format&fit=crop" alt="GPS Tracking"
               style="width:100%; height:180px; object-fit:cover; border-radius:var(--border-radius); margin-bottom:1.5rem;">
-            <h3 class="mb-2">Earthy & Truffled</h3>
-            <p>Infused with black summer truffles and wild mushrooms for complex earthiness.</p>
+            <h3 class="mb-2">GPS Live Tracking</h3>
+            <p>Real-time vehicle location and transit status updates from loading to delivery.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Section 3: Customer Stories (Updated) -->
+    <!-- Section 3: Customer Stories -->
     <section style="background:var(--primary-color); color:#fff; padding: 3rem 2rem;">
       <div class="container text-center">
-        <h2 class="section-title fade-in" style="color:var(--secondary-color); margin-bottom: 2rem;">The Cultured Community</h2>
+        <h2 class="section-title fade-in" style="color:var(--secondary-color); margin-bottom: 2rem;">The MoveEase Community</h2>
         <div style="display:flex; flex-wrap:wrap; gap:2rem; justify-content:center;">
           <div class="fade-in"
             style="flex: 1 1 250px; padding:2rem; border:1px dashed rgba(255,255,255,0.3); border-radius:var(--border-radius);">
-            <p style="font-style:italic; font-size:1.1rem; margin-bottom:1.5rem;">"Finally, a subscription box that
-              consistently wows. The Truffle Camembert is our new favorite!"</p>
-            <p style="font-weight:600;">- Maria K., Subscriber</p>
+            <p style="font-style:italic; font-size:1.1rem; margin-bottom:1.5rem;">"Finally, a shifting service that delivers on its promises. The packing team was fast, respectful, and organized."</p>
+            <p style="font-weight:600;">- Maria K., Homeowner</p>
           </div>
           <div class="fade-in"
             style="flex: 1 1 250px; padding:2rem; border:1px dashed rgba(255,255,255,0.3); border-radius:var(--border-radius);">
-            <p style="font-style:italic; font-size:1.1rem; margin-bottom:1.5rem;">"I've served Cheevo at my fine dining
-              restaurant for months. Customers can't believe it's dairy-free."</p>
+            <p style="font-style:italic; font-size:1.1rem; margin-bottom:1.5rem;">"I have used MoveEase for both my home relocation and office shifting. Their execution is consistently flawless."</p>
             <p style="font-weight:600;">- Chef Julian B.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Section 4: Best Sellers (Chef's Reserve) -->
+    <!-- Section 4: Special Handling Services -->
     <section style="padding: 3rem 2rem;">
       <div class="container">
-        <h2 class="section-title fade-in">Chef's Reserve Line</h2>
+        <h2 class="section-title fade-in">Specialty Move Options</h2>
         <div class="product-grid">
           <div class="product-card fade-in">
             <div class="product-img"><img
-                src="https://images.unsplash.com/photo-1559561853-08451507cbe7?q=80&w=2106&auto=format&fit=crop"
-                alt="Reserve Blue"></div>
+                src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=600&auto=format&fit=crop"
+                alt="Fragile Shifting"></div>
             <div class="product-info">
-              <h3 class="product-title">Reserve Almond Blue</h3>
-              <p class="product-price">$38.00</p>
+              <h3 class="product-title">Fragile & Fine Art Move</h3>
+              <p class="product-price">From $199.00</p>
               <a href="shop.html" class="btn btn-secondary" style="width:100%;">View Details</a>
             </div>
           </div>
           <div class="product-card fade-in">
-            <div class="product-img"><img src="https://images.pexels.com/photos/15510946/pexels-photo-15510946.jpeg"
-                alt="Reserve Camembert"></div>
+            <div class="product-img"><img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=600&auto=format&fit=crop"
+                alt="Heavy Load Move"></div>
             <div class="product-info">
-              <h3 class="product-title">Aged Truffle Camembert</h3>
-              <p class="product-price">$35.00</p>
+              <h3 class="product-title">Large Appliance & Safes</h3>
+              <p class="product-price">From $149.00</p>
               <a href="shop.html" class="btn btn-secondary" style="width:100%;">View Details</a>
             </div>
           </div>
           <div class="product-card fade-in">
-            <div class="product-img"><img src="https://images.pexels.com/photos/15754940/pexels-photo-15754940.jpeg"
-                alt="Reserve Ash"></div>
+            <div class="product-img"><img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=600&auto=format&fit=crop"
+                alt="Vehicle Transit"></div>
             <div class="product-info">
-              <h3 class="product-title">Ash-Ripened Blanc</h3>
-              <p class="product-price">$30.00</p>
+              <h3 class="product-title">Vehicle Shifting & Towing</h3>
+              <p class="product-price">From $299.00</p>
               <a href="shop.html" class="btn btn-secondary" style="width:100%;">View Details</a>
             </div>
           </div>
@@ -273,11 +268,8 @@
           <path d="M8 12h8" />
           <path d="M12 8v8" />
         </svg>
-        <h2 class="section-title fade-in">Born from Tradition,<br>Crafted for Tomorrow</h2>
-        <p style="max-width:700px; margin:0 auto; font-size:1.1rem; line-height:1.8;" class="fade-in">We believe that
-          abstaining from dairy shouldn't mean compromising on craftsmanship. Our founders traveled to the finest
-          creameries in France to study the art of affinage (cheese aging), adapting centuries-old techniques to
-          ethically sourced cashew and almond bases.</p>
+        <h2 class="section-title fade-in">Born from Care,<br>Crafted for Seamless Shifting</h2>
+        <p style="max-width:700px; margin:0 auto; font-size:1.1rem; line-height:1.8;" class="fade-in">We believe that moving houses shouldn't be a source of stress. Our founders established MoveEase to bring standard operating procedures, transparent pricing structures, and certified professionals to the home relocation industry, ensuring every item is treated with respect.</p>
         <a href="about.html" class="btn btn-secondary fade-in"
           style="margin-top:3rem; margin-bottom:4rem; display:inline-flex;">Our Full Story</a>
       </div>
@@ -286,14 +278,11 @@
     <!-- Section 6: CTA Banner -->
     <section class="container" style="padding: 3rem 2rem;">
       <div
-        style="background-image:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?q=80&w=2073&auto=format&fit=crop'); background-size:cover; background-position:center; background-attachment:fixed; padding:6rem 2rem; border-radius:var(--border-radius); text-align:center; color:#fff;"
+        style="background-image:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1501556466850-7c9fa1fccb4c?q=80&w=1920&auto=format&fit=crop'); background-size:cover; background-position:center; background-attachment:fixed; padding:6rem 2rem; border-radius:var(--border-radius); text-align:center; color:#fff;"
         class="fade-in">
-        <h2 style="font-family:var(--font-heading); font-size:3rem; margin-bottom:1.5rem;">Begin Your Tasting Journey
-        </h2>
-        <p style="font-size:1.2rem; margin-bottom:3rem; max-width:600px; margin-left:auto; margin-right:auto;">Subscribe
-          today and transform your culinary repertoire with our monthly curated selections.</p>
-        <a href="subscription.html" class="btn btn-primary" style="font-size:1.1rem; padding:0 2.5rem;">Join The
-          Club</a>
+        <h2 style="font-family:var(--font-heading); font-size:3rem; margin-bottom:1.5rem;">Begin Your Relocation Journey</h2>
+        <p style="font-size:1.2rem; margin-bottom:3rem; max-width:600px; margin-left:auto; margin-right:auto;">Book your shifting today and experience a hassle-free transition to your new home.</p>
+        <a href="subscription.html" class="btn btn-primary" style="font-size:1.1rem; padding:0 2.5rem;">Get Shifting Quote</a>
       </div>
     </section>
   </main>
@@ -302,8 +291,8 @@
   <footer class="site-footer">
     <div class="footer-grid fade-in">
       <div class="footer-col">
-          <svg class="logo-icon-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M50 12C29.0132 12 12 29.0132 12 50C12 70.9868 29.0132 88 50 88C70.9868 88 88 70.9868 88 50C88 41.5 85.5 33.5 81 27" stroke="currentColor" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/><path d="M50 50L83 17" stroke="currentColor" stroke-width="11" stroke-linecap="round"/><path d="M58 24C58 24 76 24 76 42C76 60 58 60 58 60C58 45 42 50 50 50" fill="currentColor"/><circle cx="50" cy="50" r="5" fill="currentColor"/></svg> <span class="logo-text">Cheevo</span>
-        <p>Crafting premium, plant-based cheeses with traditional methods and pure ingredients.</p>
+        <svg class="logo-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h6M3 12h4M1 16h5" /><path d="M9 6h9v10H9z" /><path d="M18 8h3l2 3v5h-5z" /><circle cx="12" cy="18" r="2" /><circle cx="20" cy="18" r="2" /></svg> <span class="logo-text">MoveEase</span>
+        <p>Premium residential and corporate shifting and packing services. Safe, secure, and stress-free.</p>
         <div class="social-icons">
           <a href="#" class="social-icon"><svg viewBox="0 0 24 24">
               <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
@@ -323,8 +312,8 @@
       <div class="footer-col">
         <h4>Quick Links</h4>
         <div class="footer-links">
-          <a href="shop.html">Shop Cheeses</a>
-          <a href="subscription.html">Subscriptions</a>
+          <a href="shop.html">Our Services</a>
+          <a href="subscription.html">Shifting Packages</a>
           <a href="about.html">Our Story</a>
           <a href="contact.html">Contact Us</a>
         </div>
@@ -332,15 +321,15 @@
       <div class="footer-col">
         <h4>Resources</h4>
         <div class="footer-links">
-          <a href="collections.html">Collections</a>
+          <a href="collections.html">Service Areas</a>
           <a href="dashboard.html">My Dashboard</a>
           <a href="#">FAQ</a>
-          <a href="#">Shipping Policy</a>
+          <a href="#">Moving Policy</a>
         </div>
       </div>
       <div class="footer-col">
         <h4>Newsletter</h4>
-        <p class="mb-2">Subscribe for exclusive offers and new flavors.</p>
+        <p class="mb-2">Subscribe for moving checklists and offers.</p>
         <form class="form-group" style="display:flex;gap:0.5rem;">
           <input type="email" placeholder="Email Address" class="form-input" style="margin-bottom:0;" required>
           <button type="submit" class="btn btn-primary" style="padding:0 1.5rem;"><i data-lucide="send"></i></button>
@@ -348,7 +337,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 Cheevo Cheesemaker. All Rights Reserved.</p>
+      <p>&copy; 2026 MoveEase Relocation. All Rights Reserved.</p>
       <button id="back-to-top" class="back-to-top" aria-label="Back to top">
         <i data-lucide="arrow-up"></i>
       </button>
