@@ -9,6 +9,34 @@
   <link rel="icon" type="image/svg+xml" href="logomark.svg">
   <style>
     .social-icon-sm { width: 40px !important; height: 40px !important; }
+    [data-theme="dark"] .info-icon-wrapper {
+      color: var(--secondary-color) !important;
+    }
+
+    .contact-grid {
+      grid-template-columns: 1fr 1.5fr;
+    }
+
+    @media (max-width: 930px) {
+      .contact-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+      }
+      
+      .contact-card-wrap {
+        padding: 1.75rem 1.25rem !important;
+      }
+      
+      .contact-section {
+        padding: 3rem 0.5rem !important;
+      }
+      
+      /* Also stack the first name and last name input fields vertically on small screens */
+      .contact-grid form div[style*="grid-template-columns:1fr 1fr"],
+      .contact-grid form div[style*="grid-template-columns: 1fr 1fr"] {
+        grid-template-columns: 1fr !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -71,15 +99,15 @@
     </section>
 
     <!-- Section 2: Info & Form Grid -->
-    <section class="container" style="padding: var(--section-padding);">
-      <div class="grid-stack" style="grid-template-columns: 1fr 1.5fr;">
+    <section class="container contact-section" style="padding: var(--section-padding);">
+      <div class="grid-stack contact-grid">
         
         <!-- Info -->
-        <div class="slide-in-left" style="background:var(--card-bg); padding:3rem; border-radius:var(--border-radius); border:1px solid var(--border-color); box-shadow:var(--shadow);">
+        <div class="slide-in-left contact-card-wrap" style="background:var(--card-bg); padding:3rem; border-radius:var(--border-radius); border:1px solid var(--border-color); box-shadow:var(--shadow);">
           <h2 class="mb-4" style="font-family:var(--font-heading); font-size:2.2rem;">Office Details</h2>
           
           <div style="display:flex; gap:1.5rem; margin-bottom:2rem;">
-            <div style="width:55px; height:55px; background:var(--bg-color); border-radius:50%; display:flex; align-items:center; justify-content:center; border:1px solid var(--border-color); color:var(--primary-color);">
+            <div class="info-icon-wrapper" style="width:55px; height:55px; background:var(--bg-color); border-radius:50%; display:flex; align-items:center; justify-content:center; border:1px solid var(--border-color); color:var(--primary-color);">
               <i data-lucide="map-pin"></i>
             </div>
             <div>
@@ -89,7 +117,7 @@
           </div>
           
           <div style="display:flex; gap:1.5rem; margin-bottom:2rem;">
-            <div style="width:55px; height:55px; background:var(--bg-color); border-radius:50%; display:flex; align-items:center; justify-content:center; border:1px solid var(--border-color); color:var(--primary-color);">
+            <div class="info-icon-wrapper" style="width:55px; height:55px; background:var(--bg-color); border-radius:50%; display:flex; align-items:center; justify-content:center; border:1px solid var(--border-color); color:var(--primary-color);">
               <i data-lucide="mail"></i>
             </div>
             <div>
@@ -99,7 +127,7 @@
           </div>
 
           <div style="display:flex; gap:1.5rem; margin-bottom:2rem;">
-            <div style="width:55px; height:55px; background:var(--bg-color); border-radius:50%; display:flex; align-items:center; justify-content:center; border:1px solid var(--border-color); color:var(--primary-color);">
+            <div class="info-icon-wrapper" style="width:55px; height:55px; background:var(--bg-color); border-radius:50%; display:flex; align-items:center; justify-content:center; border:1px solid var(--border-color); color:var(--primary-color);">
               <i data-lucide="phone"></i>
             </div>
             <div>
@@ -109,7 +137,7 @@
           </div>
 
           <div style="display:flex; gap:1.5rem;">
-            <div style="width:55px; height:55px; background:var(--bg-color); border-radius:50%; display:flex; align-items:center; justify-content:center; border:1px solid var(--border-color); color:var(--primary-color);">
+            <div class="info-icon-wrapper" style="width:55px; height:55px; background:var(--bg-color); border-radius:50%; display:flex; align-items:center; justify-content:center; border:1px solid var(--border-color); color:var(--primary-color);">
               <i data-lucide="share-2"></i>
             </div>
             <div>
@@ -128,7 +156,7 @@
 
         <!-- Form -->
         <div class="slide-in-right">
-          <div style="background:var(--card-bg); padding:3rem; border-radius:var(--border-radius); border:1px solid var(--border-color); box-shadow:var(--shadow);">
+          <div class="contact-card-wrap" style="background:var(--card-bg); padding:3rem; border-radius:var(--border-radius); border:1px solid var(--border-color); box-shadow:var(--shadow);">
             <h2 class="mb-4" style="font-family:var(--font-heading); font-size:1.8rem;">Send a Message</h2>
             <form>
               <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">

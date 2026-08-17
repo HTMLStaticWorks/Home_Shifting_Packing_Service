@@ -17,6 +17,12 @@
       margin-bottom: 3rem;
     }
 
+    @media (max-width: 1024px) {
+      .filters {
+        margin-top: 2.5rem;
+      }
+    }
+
     .filter-btn {
       background: var(--input-bg);
       border: 1px solid var(--border-color);
@@ -35,6 +41,25 @@
       background: var(--primary-color);
       color: #fff;
       border-color: var(--primary-color);
+    }
+
+    [data-theme="dark"] .filter-btn {
+      background: transparent;
+      border-color: rgba(255, 255, 255, 0.3);
+      color: var(--text-color);
+    }
+
+    [data-theme="dark"] .filter-btn:hover {
+      background: rgba(249, 115, 22, 0.15);
+      border-color: var(--secondary-color);
+      color: var(--secondary-color);
+    }
+
+    [data-theme="dark"] .filter-btn.active {
+      background: var(--secondary-color);
+      border-color: var(--secondary-color);
+      color: #06101E;
+      font-weight: 600;
     }
 
     /* Quick View Popup */
@@ -152,7 +177,7 @@
   <main>
     <!-- Section 1: Hero/Title -->
     <section class="fade-in"
-      style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=2073&auto=format&fit=crop'); background-size: cover; background-position: center; color: #fff; padding: 6rem 2rem; text-align:center;">
+      style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwYQYhSYkUD8KkJ572-Q86ON5az5qV5Vy4ehOlad4kRlx1OS_ns2b26xs&s=10'); background-size: cover; background-position: center; color: #fff; padding: 6rem 2rem; text-align:center;">
       <div class="container slide-in-top">
         <h1 class="section-title" style="margin-bottom:1rem; font-family:var(--font-heading); font-size:4.5rem;">Our Services</h1>
         <p style="font-size:1.2rem; max-width:600px; margin:0 auto;">Comprehensive packing, moving, and storage solutions tailored for you.</p>
@@ -174,32 +199,32 @@
       <div class="product-grid">
         <div class="product-card fade-in" data-category="shifting specialty">
           <div class="product-img"><img
-              src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=600&auto=format&fit=crop"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZSngZLK5Q6U3ZL_8L8yP0_qKoZ2JxaXb4E7pdZ8DIOMO2e4K2nsVllAc&s=10"
               alt="Local Shifting" style="width:100%;height:100%;object-fit:cover;"></div>
           <div class="product-info">
             <h3 class="product-title">Local Home Shifting</h3>
             <p class="product-price">From $399.00</p>
             <button class="btn btn-secondary quick-view-trigger" data-title="Local Home Shifting" data-price="From $399.00"
-              data-img="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=600&auto=format&fit=crop"
+              data-img="https://pmrelocations.com/public/assets/images/blog/1711701725_house-moving.webp"
               data-desc="Safe, secure local residential move. Includes basic packing materials, loading/unloading, and a dedicated transport truck."
               style="width:100%;">Quick View</button>
           </div>
         </div>
         <div class="product-card fade-in" data-category="packing">
-          <div class="product-img"><img src="https://images.unsplash.com/photo-1530587191325-3db32d826c18?q=80&w=600&auto=format&fit=crop"
+          <div class="product-img"><img src="https://happypackersmover.com/wp-content/uploads/2025/07/135.jpg"
               alt="Packing" style="width:100%;height:100%;object-fit:cover;"></div>
           <div class="product-info">
             <h3 class="product-title">Full Service Packing</h3>
             <p class="product-price">From $199.00</p>
             <button class="btn btn-secondary quick-view-trigger" data-title="Full Service Packing" data-price="From $199.00"
-              data-img="https://images.unsplash.com/photo-1530587191325-3db32d826c18?q=80&w=600&auto=format&fit=crop"
+              data-img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPZzWIhd1Ams_yuXs4Bm3pWZ5TMsJiwImosHClDZI6WsQAo86S0OcmPAn5&s=10"
               data-desc="Our team carefully packs all your items, from fragile glassware to heavy furniture, using premium bubble wraps and sturdy cartons."
               style="width:100%;">Quick View</button>
           </div>
         </div>
         <div class="product-card fade-in" data-category="specialty shifting">
           <div class="product-img"><img
-              src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=600&auto=format&fit=crop"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOv39_5cvY-ku_wn0-UENqQiCcVRl5LAA7yORlkjd0Gbh9U714fJO-IdM&s=10"
               alt="Office Shifting" style="width:100%;height:100%;object-fit:cover;"></div>
           <div class="product-info">
             <h3 class="product-title">Corporate Office Shifting</h3>
@@ -211,7 +236,7 @@
           </div>
         </div>
         <div class="product-card fade-in" data-category="storage">
-          <div class="product-img"><img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=600&auto=format&fit=crop"
+          <div class="product-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg9o4xwGA0mzdELcLIkm9C5_pxmxniqHsfCFoLjhk-WQ&s"
               alt="Storage" style="width:100%;height:100%;object-fit:cover;"></div>
           <div class="product-info">
             <h3 class="product-title">Climate-Controlled Storage</h3>
@@ -224,7 +249,7 @@
         </div>
         <div class="product-card fade-in" data-category="packing shifting">
           <div class="product-img"><img
-              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=600&auto=format&fit=crop"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCRVJmXLp7HDXlyE9Q_xDFZp-VmHtWR5NkoGEvMmKfJtHzANkewAzbVDg&s=10"
               alt="Unpacking" style="width:100%;height:100%;object-fit:cover;"></div>
           <div class="product-info">
             <h3 class="product-title">Unpacking & Setup</h3>
@@ -242,7 +267,7 @@
             <h3 class="product-title">Fragile & Fine Art Moving</h3>
             <p class="product-price">From $299.00</p>
             <button class="btn btn-secondary quick-view-trigger" data-title="Fragile & Fine Art Moving" data-price="From $299.00"
-              data-img="https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=600&auto=format&fit=crop"
+              data-img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmkCrn6Hs_jJ7_2Q0XtfiHCuoizJYi0vFaAoqGo0sljg&s=10"
               data-desc="Specialized transport and protective wood crating for valuable paintings, sculptures, pianos, and delicate heirloom pieces."
               style="width:100%;">Quick View</button>
           </div>
@@ -268,10 +293,10 @@
           <i data-lucide="gift"
             style="width:48px; height:48px; color:var(--secondary-color); margin-bottom:1.5rem;"></i>
           <h2 class="mb-3" style="font-family:var(--font-heading); font-size:2.8rem;">Still Can't Decide?</h2>
-          <p class="mb-4" style="font-size:1.15rem; max-width:550px; margin:0 auto 2.5rem; opacity:0.8;">Check out our custom shifting packages or get a personalized quote for your relocation today.</p>
+          <p class="mb-4" style="font-size:1.15rem; max-width:650px; margin:0 auto 2.5rem; opacity:0.8; line-height:1.6;">Check out our custom shifting packages or get a personalized quote for your relocation today. Our dedicated move coordinators are available 24/7 to help map your transition and answer any questions.</p>
           <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
             <a href="subscription.html" class="btn btn-primary" style="padding:0 3rem;">View Packages</a>
-            <a href="shop.html" class="btn btn-secondary">Our Services</a>
+            <a href="contact.html" class="btn btn-secondary" style="padding:0 3rem;">Request Consultation</a>
           </div>
         </div>
       </div>
@@ -303,20 +328,24 @@
           <svg class="logo-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h6M3 12h4M1 16h5" /><path d="M9 6h9v10H9z" /><path d="M18 8h3l2 3v5h-5z" /><circle cx="12" cy="18" r="2" /><circle cx="20" cy="18" r="2" /></svg> <span class="logo-text">MoveEase</span>
         </a>
         <p>Premium residential and corporate shifting and packing services. Safe, secure, and stress-free.</p>
-        <div class="social-icons">
-          <a href="#" class="social-icon"><svg viewBox="0 0 24 24">
+                <div class="social-icons">
+          <a href="#" class="social-icon">
+            <svg viewBox="0 0 24 24">
               <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
               <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
               <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-            </svg></a>
-          <a href="#" class="social-icon"><svg viewBox="0 0 24 24">
+            </svg>
+          </a>
+          <a href="#" class="social-icon">
+            <svg viewBox="0 0 24 24">
               <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-            </svg></a>
-          <a href="#" class="social-icon"><svg viewBox="0 0 24 24">
-              <path
-                d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z">
-              </path>
-            </svg></a>
+            </svg>
+          </a>
+          <a href="#" class="social-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" stroke="none">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
         </div>
       </div>
       <div class="footer-col">

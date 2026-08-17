@@ -26,7 +26,7 @@
       inset: 0;
       width: 100%;
       height: 100%;
-      background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?q=80&w=1920&auto=format&fit=crop');
+      background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('https://t3.ftcdn.net/jpg/05/92/43/30/360_F_592433050_mLKNst4tyalO39yy0zfPG6bdaVb9NWdA.jpg');
       background-size: cover;
       background-position: center;
       z-index: 0;
@@ -103,6 +103,30 @@
     [data-theme="dark"] .fp-icon {
       color: var(--secondary-color);
     }
+
+    .community-card {
+      flex: 1 1 250px;
+      padding: 2rem;
+      border: 1px dashed rgba(255, 255, 255, 0.3);
+      border-radius: var(--border-radius);
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .flavor-profile-card {
+        padding: 2.5rem 1.25rem !important;
+        flex: 1 1 100% !important;
+        max-width: 100% !important;
+      }
+      .community-card {
+        padding: 1.5rem 1rem !important;
+        flex: 1 1 100% !important;
+        max-width: 100% !important;
+      }
+      section {
+        padding: 3rem 0.5rem !important;
+      }
+    }
   </style>
 </head>
 
@@ -175,25 +199,25 @@
         <h2 class="section-title fade-in">Our Moving Pillars</h2>
         <div style="display:flex; flex-wrap:wrap; justify-content:center; gap: 2rem;">
           <div class="flavor-profile-card fade-in">
-            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=600&auto=format&fit=crop" alt="Fully Insured"
+            <img src="https://5.imimg.com/data5/SELLER/Default/2024/1/374172961/MP/YB/JV/206962914/home-shifting-service-500x500.jpg" alt="Fully Insured"
               style="width:100%; height:180px; object-fit:cover; border-radius:var(--border-radius); margin-bottom:1.5rem;">
             <h3 class="mb-2">Fully Bonded & Insured</h3>
             <p>Comprehensive transit insurance covering all your household goods for complete peace of mind.</p>
           </div>
           <div class="flavor-profile-card fade-in" style="transition-delay:0.1s;">
-            <img src="https://images.unsplash.com/photo-1530587191325-3db32d826c18?q=80&w=600&auto=format&fit=crop" alt="Premium Packing"
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUdNnl4zwNEqYGqqxEy70c63PHCuocQAnpgztjrpVEsw&s=10" alt="Premium Packing"
               style="width:100%; height:180px; object-fit:cover; border-radius:var(--border-radius); margin-bottom:1.5rem;">
             <h3 class="mb-2">Premium Packing Materials</h3>
             <p>Multi-layer bubble wrap, heavy-duty corrugated boxes, and tailored crating for fragile items.</p>
           </div>
           <div class="flavor-profile-card fade-in" style="transition-delay:0.2s;">
-            <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=600&auto=format&fit=crop" alt="On-Time Delivery"
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDbQDy6Bkgf9Cg96Vpl2JdFQGUJr2AyTH88Flj7KMezBNSvyIqcDBen4g&s=10" alt="On-Time Delivery"
               style="width:100%; height:180px; object-fit:cover; border-radius:var(--border-radius); margin-bottom:1.5rem;">
             <h3 class="mb-2">On-Time Shifting</h3>
             <p>Punctual arrivals and strict adherence to moving timelines across local areas and major cities.</p>
           </div>
           <div class="flavor-profile-card fade-in" style="transition-delay:0.3s;">
-            <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=600&auto=format&fit=crop" alt="GPS Tracking"
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGj835zarIrMWi-jJENgpxAd5fMNZEamBJUgQ81HOr-TeF4J9pbeCvLN_e&s=10" alt="GPS Tracking"
               style="width:100%; height:180px; object-fit:cover; border-radius:var(--border-radius); margin-bottom:1.5rem;">
             <h3 class="mb-2">GPS Live Tracking</h3>
             <p>Real-time vehicle location and transit status updates from loading to delivery.</p>
@@ -207,13 +231,11 @@
       <div class="container text-center">
         <h2 class="section-title fade-in" style="color:var(--secondary-color); margin-bottom: 2rem;">The MoveEase Community</h2>
         <div style="display:flex; flex-wrap:wrap; gap:2rem; justify-content:center;">
-          <div class="fade-in"
-            style="flex: 1 1 250px; padding:2rem; border:1px dashed rgba(255,255,255,0.3); border-radius:var(--border-radius);">
+          <div class="community-card fade-in">
             <p style="font-style:italic; font-size:1.1rem; margin-bottom:1.5rem;">"Finally, a shifting service that delivers on its promises. The packing team was fast, respectful, and organized."</p>
             <p style="font-weight:600;">- Maria K., Homeowner</p>
           </div>
-          <div class="fade-in"
-            style="flex: 1 1 250px; padding:2rem; border:1px dashed rgba(255,255,255,0.3); border-radius:var(--border-radius);">
+          <div class="community-card fade-in">
             <p style="font-style:italic; font-size:1.1rem; margin-bottom:1.5rem;">"I have used MoveEase for both my home relocation and office shifting. Their execution is consistently flawless."</p>
             <p style="font-weight:600;">- Chef Julian B.</p>
           </div>
@@ -228,7 +250,7 @@
         <div class="product-grid">
           <div class="product-card fade-in">
             <div class="product-img"><img
-                src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=600&auto=format&fit=crop"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr6VwXZtXpsPzy5bdL9-9cLCgi6IElMBZQBObUhtGnwU4c0Od0NM_Vp1Ye&s=10"
                 alt="Fragile Shifting"></div>
             <div class="product-info">
               <h3 class="product-title">Fragile & Fine Art Move</h3>
@@ -237,7 +259,7 @@
             </div>
           </div>
           <div class="product-card fade-in">
-            <div class="product-img"><img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=600&auto=format&fit=crop"
+            <div class="product-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSI_1wHQOfIjtu3dIaqOV0T8kVNzjO-YST71yXFF7LJ-A9eNiAk17DlCE4&s=10"
                 alt="Heavy Load Move"></div>
             <div class="product-info">
               <h3 class="product-title">Large Appliance & Safes</h3>
@@ -246,7 +268,7 @@
             </div>
           </div>
           <div class="product-card fade-in">
-            <div class="product-img"><img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=600&auto=format&fit=crop"
+            <div class="product-img"><img src="https://media.istockphoto.com/id/1158769814/photo/happy-new-homeowner-welcomes-professional-mover-with-hand-truck-full-of-cardboard-boxes.jpg?s=612x612&w=0&k=20&c=v0LCUE42EAgQO75c-UqVtWVNPDKU4mCEqueUj24c4lo="
                 alt="Vehicle Transit"></div>
             <div class="product-info">
               <h3 class="product-title">Vehicle Shifting & Towing</h3>

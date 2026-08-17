@@ -14,10 +14,10 @@
       --accent-soft: rgba(249, 115, 22, 0.1);
     }
     
-    body { background: var(--dash-bg); margin: 0; font-family: var(--font-body); }
+    body { background: var(--dash-bg); margin: 0; font-family: var(--font-body); overflow: hidden; height: 100vh; }
     .hide-desktop { display: none !important; }
     
-    .dashboard-container { display: flex; min-height: 100vh; position: relative; }
+    .dashboard-container { display: flex; height: 100vh; overflow: hidden; position: relative; }
     
     /* Sidebar Styling */
     .sidebar {
@@ -54,15 +54,15 @@
     .sidebar-footer > div { display: flex; gap: 1rem; align-items: center; }
     
     /* Main Content */
-    .main-content { flex: 1; margin-left: var(--sidebar-width); min-width: 0; }
-    .dash-header { height: 70px; background: var(--dash-card); border-bottom: 1px solid var(--border-color); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 900; }
+    .main-content { flex: 1; margin-left: var(--sidebar-width); min-width: 0; display: flex; flex-direction: column; height: 100vh; overflow: hidden; }
+    .dash-header { height: 70px; background: var(--dash-card); border-bottom: 1px solid var(--border-color); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 900; flex-shrink: 0; }
     .dash-header .icon-btn, .dash-header .btn { height: 44px !important; align-items: center !important; justify-content: center !important; }
     
     @media (max-width: 1200px) {
       .dash-header .hide-desktop { display: flex !important; }
     }
     
-    .dash-body { padding: 2rem; max-width: 1400px; margin: 0 auto; }
+    .dash-body { padding: 2rem; max-width: 1400px; margin: 0 auto; width: 100%; flex: 1; overflow-y: auto; }
     
     /* Global Card Styles */
     .dash-box { background: var(--dash-card); border-radius: var(--border-radius); border: 1px solid var(--border-color); padding: 1.5rem; box-shadow: var(--shadow); margin-bottom: 2rem; }
@@ -91,7 +91,7 @@
     .logo-icon-svg {
       width: 40px;
       height: 40px;
-      color: var(--primary-color);
+      color: var(--secondary-color);
       transition: all 0.3s ease;
     }
 
@@ -135,7 +135,7 @@
     @media (max-width: 768px) {
       .tracker-steps { flex-direction: column; gap: 1.5rem; padding-left: 2rem; }
       .tracker-steps::before { left: 40px; top: 0; width: 4px; height: 100%; }
-      .tracker-progress { left: 40px; top: 0; width: 4px; height: 50%; }
+      .tracker-progress { left: 40px; top: 0; width: 4px !important; height: 50%; }
       .step-node { display: flex; align-items: center; text-align: left; gap: 1.5rem; }
       .step-circle { margin: 0; }
     }
@@ -170,6 +170,44 @@
     .dash-section.active { display: block; }
     @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
+    /* RTL Dashboard Layout Rules */
+    [dir="rtl"] .sidebar {
+      left: auto;
+      right: 0;
+      border-right: none;
+      border-left: 1px solid var(--border-color);
+    }
+    
+    [dir="rtl"] .main-content {
+      margin-left: 0 !important;
+      margin-right: var(--sidebar-width) !important;
+    }
+
+    [dir="rtl"] .nav-item {
+      border-left: none;
+      border-right: 3px solid transparent;
+    }
+
+    [dir="rtl"] .nav-item:hover, 
+    [dir="rtl"] .nav-item.active {
+      border-left-color: transparent !important;
+      border-right-color: var(--secondary-color) !important;
+    }
+
+    /* RTL Media Queries for mobile/tablet responsive layout */
+    @media (max-width: 1200px) {
+      [dir="rtl"] .sidebar {
+        transform: translateX(100%);
+        box-shadow: -20px 0 50px rgba(0,0,0,0.3);
+      }
+      [dir="rtl"] .sidebar.open {
+        transform: translateX(0);
+      }
+      [dir="rtl"] .main-content {
+        margin-right: 0 !important;
+      }
+    }
+
     /* Alert Banner */
     .alert-banner {
       background: #10b981;
@@ -180,6 +218,72 @@
       display: none;
       align-items: center;
       justify-content: space-between;
+    }
+
+    .btn-tab-trigger:hover {
+      background: var(--secondary-color) !important;
+      color: #fff !important;
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 10px 15px -3px rgba(249, 115, 22, 0.3);
+    }
+
+    .btn-link {
+      color: var(--secondary-color) !important;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    .btn-link:hover {
+      color: var(--secondary-hover) !important;
+      text-decoration: underline;
+    }
+
+    /* Dark theme form inputs calendar/chevron visibility */
+    [data-theme="dark"] .form-input {
+      color-scheme: dark !important;
+    }
+    [data-theme="dark"] input[type="date"]::-webkit-calendar-picker-indicator,
+    [data-theme="dark"] #shift-date::-webkit-calendar-picker-indicator {
+      filter: invert(1) !important;
+      opacity: 1 !important;
+      cursor: pointer;
+    }
+
+    /* Dark theme primary-color text & icon visibility overrides */
+    [data-theme="dark"] [style*="color:var(--primary-color)"],
+    [data-theme="dark"] [style*="color: var(--primary-color)"] {
+      color: var(--secondary-color) !important;
+    }
+    [data-theme="dark"] [style*="color:var(--primary-color)"] svg,
+    [data-theme="dark"] [style*="color: var(--primary-color)"] svg {
+      stroke: var(--secondary-color) !important;
+    }
+
+    /* Completed steps visibility in dark mode */
+    [data-theme="dark"] .step-node.complete .step-circle {
+      border-color: #10b981 !important;
+      background: #10b981 !important;
+      color: #06101E !important;
+    }
+
+    /* Delete and Download Hover/Visibility Styles */
+    .btn-delete {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .btn-delete:hover {
+      color: #ef4444 !important;
+      transform: scale(1.2);
+      filter: drop-shadow(0 0 6px rgba(239, 68, 68, 0.5));
+    }
+
+    .btn-download {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    [data-theme="dark"] .btn-download {
+      color: var(--secondary-color) !important;
+    }
+    .btn-download:hover {
+      color: var(--secondary-hover) !important;
+      transform: translateY(-2px);
     }
   </style>
 </head>
@@ -456,7 +560,7 @@
               <div style="flex:1; border:1px solid var(--border-color); padding:1rem; border-radius:10px; display:flex; align-items:center; gap:1rem;">
                 <i data-lucide="credit-card"></i>
                 <div><p style="margin:0; font-weight:600;">Visa **** 4242</p><p style="margin:0; font-size:0.8rem; opacity:0.7;">Expires 12/28</p></div>
-                <button style="margin-left:auto; background:none; border:none; color:#ff4444; cursor:pointer;"><i data-lucide="trash-2" style="width:16px;"></i></button>
+                <button class="btn-delete" style="margin-left:auto; background:none; border:none; color:#ff4444; cursor:pointer;"><i data-lucide="trash-2" style="width:16px;"></i></button>
               </div>
               <button class="btn btn-secondary" style="height:auto;">+ Add New Card</button>
             </div>
@@ -480,14 +584,14 @@
                     <td>Sep 15, 2026</td>
                     <td>$899.00</td>
                     <td><span style="background:rgba(16,185,129,0.1); color:#10b981; padding:0.2rem 0.6rem; border-radius:10px; font-size:0.75rem; font-weight:600;">Paid (Visa Confirmed)</span></td>
-                    <td><button style="background:none; border:none; color:var(--primary-color); cursor:pointer;"><i data-lucide="download"></i></button></td>
+                    <td><button class="btn-download" style="background:none; border:none; color:var(--primary-color); cursor:pointer;"><i data-lucide="download"></i></button></td>
                   </tr>
                   <tr style="border-bottom:1px solid var(--border-color);">
                     <td style="padding:1rem; font-weight:600;">#INV-2026-8801</td>
                     <td>Aug 15, 2026</td>
                     <td>$149.00</td>
                     <td><span style="background:rgba(16,185,129,0.1); color:#10b981; padding:0.2rem 0.6rem; border-radius:10px; font-size:0.75rem; font-weight:600;">Paid (Visa Confirmed)</span></td>
-                    <td><button style="background:none; border:none; color:var(--primary-color); cursor:pointer;"><i data-lucide="download"></i></button></td>
+                    <td><button class="btn-download" style="background:none; border:none; color:var(--primary-color); cursor:pointer;"><i data-lucide="download"></i></button></td>
                   </tr>
                 </tbody>
               </table>

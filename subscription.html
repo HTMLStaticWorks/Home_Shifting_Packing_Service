@@ -34,6 +34,24 @@
       list-style: none;
     }
 
+    [data-theme="dark"] .plan-features li i,
+    [data-theme="dark"] .plan-features li svg {
+      color: var(--secondary-color) !important;
+    }
+
+    [data-theme="dark"] .step-number {
+      background: var(--secondary-color) !important;
+      color: #06101E !important;
+    }
+
+    [dir="rtl"] .plan-features {
+      text-align: right;
+    }
+
+    [dir="rtl"] table {
+      text-align: right !important;
+    }
+
     @media (max-width: 1024px) {
       .subscription-section {
         padding-left: 2.5rem !important;
@@ -101,7 +119,7 @@
 
   <main>
     <!-- Section 1: Hero -->
-    <section class="fade-in" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=2106&auto=format&fit=crop'); background-size: cover; background-position: center; color: #fff; padding: 6rem 2rem; text-align:center;">
+    <section class="fade-in" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHTR5Oc_I9XIVh_bUJPqMDSEqNADQcD6uYOMlB2eUQgbhSjjTnmChjHkFJ&s=10'); background-size: cover; background-position: center; color: #fff; padding: 6rem 2rem; text-align:center;">
       <div class="container slide-in-top">
         <h1 class="section-title" style="margin-bottom:1.5rem; font-family:var(--font-heading); font-size:4rem;">Shifting Packages</h1>
         <p style="font-size:1.2rem; max-width:600px; margin:0 auto;">Choose from our standard, premium, and elite relocation plans tailored to your needs.</p>
@@ -169,17 +187,17 @@
         <h2 class="section-title fade-in">How Shifting Works</h2>
         <div style="display:flex; flex-wrap:wrap; gap:4rem; justify-content:center; position:relative;">
           <div class="fade-in" style="flex:1; min-width:250px; max-width:300px;">
-            <div style="width:80px; height:80px; background:var(--primary-color); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 1.5rem; font-size:2rem; font-weight:700;">1</div>
+            <div class="step-number" style="width:80px; height:80px; background:var(--primary-color); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 1.5rem; font-size:2rem; font-weight:700;">1</div>
             <h3 class="mb-2">Choose Package</h3>
             <p style="opacity:0.8;">Select the shifting tier that fits your household size.</p>
           </div>
           <div class="fade-in" style="transition-delay:0.1s; flex:1; min-width:250px; max-width:300px;">
-            <div style="width:80px; height:80px; background:var(--primary-color); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 1.5rem; font-size:2rem; font-weight:700;">2</div>
+            <div class="step-number" style="width:80px; height:80px; background:var(--primary-color); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 1.5rem; font-size:2rem; font-weight:700;">2</div>
             <h3 class="mb-2">Date Scheduling</h3>
             <p style="opacity:0.8;">Select your shifting date and get a tracking ID instantly.</p>
           </div>
           <div class="fade-in" style="transition-delay:0.2s; flex:1; min-width:250px; max-width:300px;">
-            <div style="width:80px; height:80px; background:var(--primary-color); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 1.5rem; font-size:2rem; font-weight:700;">3</div>
+            <div class="step-number" style="width:80px; height:80px; background:var(--primary-color); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 1.5rem; font-size:2rem; font-weight:700;">3</div>
             <h3 class="mb-2">Packing & Move</h3>
             <p style="opacity:0.8;">Our crew arrives to pack, load, transport, and unpack your home safely.</p>
           </div>
@@ -282,8 +300,8 @@
     <!-- Section 5: CTA -->
     <section style="background:var(--bg-color); padding: 5rem 2rem; text-align:center;">
       <div class="container fade-in">
-        <h2 class="mb-3" style="font-family:var(--font-heading); font-size:2.5rem;">Join Satisfied Customers</h2>
-        <p class="mb-4" style="max-width:600px; margin:0 auto; font-size:1.1rem; opacity:0.9;">Manage, pause, or reschedule your move date at any time directly through your interactive dashboard.</p>
+        <h2 class="mb-3" style="font-family:var(--font-heading); font-size:2.5rem;">Ready to Secure Your Move?</h2>
+        <p class="mb-4" style="max-width:700px; margin:0 auto 1.5rem; font-size:1.1rem; opacity:0.9; line-height:1.6;">Join thousands of satisfied customers who moved stress-free. Book your relocation package today to lock in your preferred shifting date, get direct access to our live tracking dashboard, and receive free premium cargo insurance.</p>
         <a href="signup.html" class="btn btn-primary" style="padding: 0 3rem; margin-top:1rem;">Start Booking</a>
       </div>
     </section>
@@ -297,10 +315,24 @@
           <svg class="logo-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h6M3 12h4M1 16h5" /><path d="M9 6h9v10H9z" /><path d="M18 8h3l2 3v5h-5z" /><circle cx="12" cy="18" r="2" /><circle cx="20" cy="18" r="2" /></svg> <span class="logo-text">MoveEase</span>
         </a>
         <p>Premium residential and corporate shifting and packing services. Safe, secure, and stress-free.</p>
-        <div class="social-icons">
-          <a href="#" class="social-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
-          <a href="#" class="social-icon"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
-          <a href="#" class="social-icon"><svg viewBox="0 0 24 24"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg></a>
+                <div class="social-icons">
+          <a href="#" class="social-icon">
+            <svg viewBox="0 0 24 24">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <a href="#" class="social-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
+          </a>
+          <a href="#" class="social-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" stroke="none">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
         </div>
       </div>
       <div class="footer-col">
