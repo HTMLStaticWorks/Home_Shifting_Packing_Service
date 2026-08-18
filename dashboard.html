@@ -237,15 +237,43 @@
       text-decoration: underline;
     }
 
+    /* Live Tracker link button reset override */
+    .btn-link.btn-tab-trigger {
+      color: var(--secondary-color) !important;
+      background: transparent !important;
+      box-shadow: none !important;
+      border: none !important;
+      transform: none !important;
+    }
+    .btn-link.btn-tab-trigger:hover {
+      color: var(--secondary-hover) !important;
+      background: transparent !important;
+      box-shadow: none !important;
+      text-decoration: underline !important;
+      transform: none !important;
+    }
+    [data-theme="dark"] .btn-link.btn-tab-trigger {
+      color: var(--secondary-color) !important;
+      background: transparent !important;
+    }
+
     /* Dark theme form inputs calendar/chevron visibility */
     [data-theme="dark"] .form-input {
       color-scheme: dark !important;
     }
+    input[type="date"]::-webkit-calendar-picker-indicator,
+    #shift-date::-webkit-calendar-picker-indicator {
+      cursor: pointer;
+      opacity: 0.9;
+    }
     [data-theme="dark"] input[type="date"]::-webkit-calendar-picker-indicator,
     [data-theme="dark"] #shift-date::-webkit-calendar-picker-indicator {
-      filter: invert(1) !important;
+      filter: brightness(0) invert(1) !important;
       opacity: 1 !important;
-      cursor: pointer;
+    }
+    [data-theme="dark"] input[type="date"]::-webkit-calendar-picker-indicator:hover,
+    [data-theme="dark"] #shift-date::-webkit-calendar-picker-indicator:hover {
+      filter: invert(65%) sepia(85%) saturate(1800%) hue-rotate(345deg) !important;
     }
 
     /* Dark theme primary-color text & icon visibility overrides */
@@ -306,6 +334,10 @@
         <div class="nav-item" data-target="checklists"><i data-lucide="check-square"></i> <span>Packing Checklist</span></div>
         <div class="nav-item" data-target="billing"><i data-lucide="credit-card"></i> <span>Invoices & Billing</span></div>
         <div class="nav-item" data-target="settings"><i data-lucide="settings"></i> <span>Settings</span></div>
+        <div class="mobile-menu-toggles hide-desktop" style="margin-top:1.5rem; padding-top:1rem; border-top:1px solid var(--border-color);">
+          <button class="icon-btn" id="sidebar-theme-toggle" title="Toggle Dark/Light Mode"><i data-lucide="moon"></i></button>
+          <button class="icon-btn rtl-toggle-btn" id="sidebar-rtl-toggle" title="Toggle RTL Alignment">RTL</button>
+        </div>
         <a href="index.html" class="nav-item" style="opacity:0.7; margin-top:1.5rem; border-top: 1px solid var(--border-color); padding-top: 1.5rem;"><i data-lucide="log-out"></i> <span>Logout</span></a>
       </nav>
     </aside>
@@ -317,8 +349,8 @@
           <h3 class="hide-mobile">Dashboard Overview</h3>
         </div>
         <div style="display:flex; align-items:center; gap:1rem;">
-          <button class="icon-btn" id="header-theme-toggle"><i data-lucide="moon"></i></button>
-          <button class="icon-btn rtl-toggle-btn" id="header-rtl-toggle">RTL</button>
+          <button class="icon-btn hide-mobile" id="header-theme-toggle"><i data-lucide="moon"></i></button>
+          <button class="icon-btn rtl-toggle-btn hide-mobile" id="header-rtl-toggle">RTL</button>
           <div style="display:flex; align-items:center; gap:0.5rem; margin-left: 0.5rem;">
             <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=1887&auto=format&fit=crop" style="width:35px; height:35px; border-radius:50%; object-fit:cover;">
             <span style="font-weight:600;" class="hide-mobile">David M.</span>
@@ -337,10 +369,10 @@
         <section id="overview" class="dash-section active">
           <div class="dash-box welcome-box" style="background:var(--primary-color); color:#fff; display:flex; justify-content:space-between; align-items:center;">
             <div>
-              <h1 style="margin:0; font-family:var(--font-heading);">Welcome back, David!</h1>
-              <p style="opacity:0.9;">Your upcoming relocation is fully scheduled and confirmed.</p>
+              <h1 style="margin:0; font-family:var(--font-heading); color:#ffffff !important;">Welcome back, David!</h1>
+              <p style="opacity:0.9; color:#efefef !important; margin-top:0.25rem;">Your upcoming relocation is fully scheduled and confirmed.</p>
             </div>
-            <button class="btn btn-tab-trigger" data-target="bookings" style="background:#fff; color:var(--primary-color);">Book Another Move</button>
+            <button class="btn btn-secondary btn-tab-trigger" data-target="bookings" style="background:var(--secondary-color) !important; color:#ffffff !important; border:none; font-weight:600; padding:0.75rem 1.5rem;">Book Another Move</button>
           </div>
 
           <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:1.5rem; margin-bottom:2rem;">
@@ -352,7 +384,7 @@
 
           <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:1.5rem;">
             <div class="dash-box">
-              <div class="box-header"><h3>Active Crew Allocation</h3><button class="btn-link btn-tab-trigger" data-target="tracker" style="font-size:0.8rem; background:none; border:none; cursor:pointer;">Live Tracker</button></div>
+              <div class="box-header"><h3>Active Crew Allocation</h3><button class="btn-link btn-tab-trigger" data-target="tracker" style="font-size:0.85rem; color:var(--secondary-color) !important; font-weight:600; background:none; border:none; cursor:pointer;">Live Tracker <i data-lucide="arrow-right" style="width:14px; height:14px; vertical-align:middle;"></i></button></div>
               <p style="font-size:0.9rem; opacity:0.8; margin-bottom:1.5rem;">Packing & loading team assigned to your relocation:</p>
               <div style="display:flex; gap:1rem; flex-wrap:wrap;">
                 <div style="flex:1; min-width:100px; text-align:center; padding:1rem; background:var(--bg-color); border-radius:8px;">

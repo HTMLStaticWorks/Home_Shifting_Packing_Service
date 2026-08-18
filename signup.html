@@ -7,6 +7,31 @@
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/svg+xml" href="logomark.svg">
 
+  <style>
+    .signup-terms-label {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      cursor: pointer;
+      font-size: 0.78rem;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    @media (max-width: 480px) {
+      .signup-terms-label {
+        font-size: 0.71rem !important;
+        gap: 0.25rem !important;
+        white-space: nowrap !important;
+      }
+    }
+    @media (max-width: 360px) {
+      .signup-terms-label {
+        font-size: 0.67rem !important;
+        gap: 0.2rem !important;
+        white-space: nowrap !important;
+      }
+    }
+  </style>
 </head>
 <body class="auth-page">
   <!-- Page Toggles -->
@@ -52,9 +77,9 @@
         </div>
       </div>
 
-      <div class="form-group" style="margin-top: 1.2rem; margin-bottom: 1.5rem;">
-        <label style="display:flex; align-items:center; gap:0.5rem; cursor:pointer; font-size:0.85rem; font-weight:500;">
-          <input type="checkbox" required style="accent-color:var(--primary-color);"> I agree to the <a href="#" style="color:var(--primary-color); font-weight:600; text-decoration:underline;">Terms of Service</a> & <a href="#" style="color:var(--primary-color); font-weight:600; text-decoration:underline;">Privacy Policy</a>
+      <div class="form-group" style="margin-top: 1.2rem; margin-bottom: 1.5rem; width:100%;">
+        <label class="signup-terms-label">
+          <input type="checkbox" required style="accent-color:var(--primary-color); flex-shrink:0;"> I agree to the <a href="#" style="color:var(--primary-color); font-weight:600; text-decoration:underline;">Terms of Service</a> &amp; <a href="#" style="color:var(--primary-color); font-weight:600; text-decoration:underline;">Privacy Policy</a>
         </label>
       </div>
 

@@ -62,9 +62,10 @@
     .hero-2-title {
       font-size: clamp(2.2rem, 10vw, 5rem);
       margin-bottom: 1rem;
-      font-weight: 400;
+      font-weight: 700;
       line-height: 1.1;
-      font-style: italic;
+      font-style: normal;
+      font-family: var(--font-heading);
       color: #fff;
       text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     }
@@ -85,12 +86,21 @@
       border-color: var(--primary-color);
     }
 
+    .flavor-profile-card:hover h1,
+    .flavor-profile-card:hover h2,
+    .flavor-profile-card:hover h3,
+    .flavor-profile-card:hover h4,
+    .flavor-profile-card:hover h5,
+    .flavor-profile-card:hover h6 {
+      color: #ffffff !important;
+    }
+
     .flavor-profile-card:hover .fp-icon {
       color: var(--secondary-color);
     }
 
     .flavor-profile-card:hover p {
-      color: rgba(255, 255, 255, 0.8);
+      color: rgba(255, 255, 255, 0.9);
     }
 
     .fp-icon {
@@ -105,14 +115,36 @@
     }
 
     .community-card {
-      flex: 1 1 250px;
-      padding: 2rem;
+      flex: 1 1 300px;
+      max-width: 380px;
+      padding: 2.5rem 2rem;
       border: 1px dashed rgba(255, 255, 255, 0.3);
       border-radius: var(--border-radius);
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(255, 255, 255, 0.04);
+      transition: var(--transition);
+    }
+
+    .community-card:hover {
+      background: rgba(255, 255, 255, 0.08);
+      transform: translateY(-5px);
+      border-color: var(--secondary-color);
+    }
+
+    [dir="rtl"] .community-card div[style*="text-align:left"] {
+      text-align: right !important;
     }
 
     @media (max-width: 768px) {
+      .hero-2 {
+        height: auto !important;
+        min-height: calc(100vh - var(--header-height)) !important;
+        padding: 5rem 1.25rem 3.5rem 1.25rem !important;
+      }
       .flavor-profile-card {
         padding: 2.5rem 1.25rem !important;
         flex: 1 1 100% !important;
@@ -123,8 +155,27 @@
         flex: 1 1 100% !important;
         max-width: 100% !important;
       }
-      section {
-        padding: 3rem 0.5rem !important;
+      .product-grid {
+        padding: 1rem 0 !important;
+        width: 100% !important;
+      }
+      section:not(.hero-2) {
+        padding: 3rem 1.25rem !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-2 {
+        padding: 4.5rem 1rem 3rem 1rem !important;
+      }
+      .hero-2-title {
+        font-size: 2.1rem !important;
+      }
+      section:not(.hero-2) {
+        padding: 2.5rem 1rem !important;
+      }
+      .cta-banner-box {
+        padding: 3.5rem 1.25rem !important;
       }
     }
   </style>
@@ -174,6 +225,10 @@
       <a href="collections.html">Service Areas</a>
       <a href="contact.html">Contact</a>
       <a href="dashboard.html">Dashboard</a>
+      <div class="mobile-menu-toggles">
+        <button class="icon-btn" id="mobile-theme-toggle" title="Toggle Dark/Light Mode"><i data-lucide="moon"></i></button>
+        <button class="icon-btn rtl-toggle-btn" id="mobile-rtl-toggle" title="Toggle RTL Alignment">RTL</button>
+      </div>
       <a href="login.html" class="mobile-login-btn">Login</a>
     </div>
   </div>
@@ -183,12 +238,12 @@
     <section class="hero-2">
       <div class="hero-2-img"></div>
       <div class="hero-2-content fade-in">
-        <p style="letter-spacing: 4px; text-transform: uppercase; font-size: 0.9rem; margin-bottom:1rem;">The Pinnacle of Premium Moves</p>
-        <h1 class="hero-2-title">Secure. Professional.<br>Seamless.</h1>
+        <span class="hero-tagline">The Pinnacle of Premium Moves</span>
+        <h1 class="hero-2-title">Secure. Professional.<br><span class="text-accent">Seamless.</span></h1>
         <p style="margin: 2rem auto; font-size: 1.2rem; max-width: 600px; color:#ddd;">Experience stress-free household relocation with certified shifting professionals.</p>
         <div class="hero-2-actions">
-          <a href="contact.html" class="btn btn-primary">Get Free Quote</a>
-          <a href="dashboard.html" class="btn btn-outline-white">Book Your Move</a>
+          <a href="contact.html" class="btn btn-primary btn-lg">Get Free Quote <i data-lucide="file-text"></i></a>
+          <a href="dashboard.html" class="btn btn-outline-white btn-lg">Book Your Move <i data-lucide="calendar"></i></a>
         </div>
       </div>
     </section>
@@ -232,12 +287,52 @@
         <h2 class="section-title fade-in" style="color:var(--secondary-color); margin-bottom: 2rem;">The MoveEase Community</h2>
         <div style="display:flex; flex-wrap:wrap; gap:2rem; justify-content:center;">
           <div class="community-card fade-in">
-            <p style="font-style:italic; font-size:1.1rem; margin-bottom:1.5rem;">"Finally, a shifting service that delivers on its promises. The packing team was fast, respectful, and organized."</p>
-            <p style="font-weight:600;">- Maria K., Homeowner</p>
+            <i data-lucide="quote" style="width:32px; height:32px; color:var(--secondary-color); opacity:0.8; margin-bottom:1rem;"></i>
+            <p style="font-style:italic; font-size:1.05rem; line-height:1.6; margin-bottom:1.5rem;">"Finally, a shifting service that delivers on its promises. The packing team was fast, respectful, and organized."</p>
+            <div style="display:flex; align-items:center; gap:0.85rem; margin-top:auto;">
+              <div style="position:relative;">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop" alt="Maria K." style="width:50px; height:50px; border-radius:50%; object-fit:cover; border:2px solid var(--secondary-color);">
+                <div style="position:absolute; bottom:-2px; right:-2px; background:var(--secondary-color); color:#fff; border-radius:50%; width:20px; height:20px; display:flex; align-items:center; justify-content:center;">
+                  <i data-lucide="user-check" style="width:11px; height:11px;"></i>
+                </div>
+              </div>
+              <div style="text-align:left;">
+                <p style="font-weight:700; margin:0; font-size:1rem; color:#ffffff;">Maria K.</p>
+                <p style="font-size:0.85rem; opacity:0.8; margin:0; color:#efefef;">Homeowner</p>
+              </div>
+            </div>
           </div>
           <div class="community-card fade-in">
-            <p style="font-style:italic; font-size:1.1rem; margin-bottom:1.5rem;">"I have used MoveEase for both my home relocation and office shifting. Their execution is consistently flawless."</p>
-            <p style="font-weight:600;">- Chef Julian B.</p>
+            <i data-lucide="quote" style="width:32px; height:32px; color:var(--secondary-color); opacity:0.8; margin-bottom:1rem;"></i>
+            <p style="font-style:italic; font-size:1.05rem; line-height:1.6; margin-bottom:1.5rem;">"I have used MoveEase for both my home relocation and office shifting. Their execution is consistently flawless."</p>
+            <div style="display:flex; align-items:center; gap:0.85rem; margin-top:auto;">
+              <div style="position:relative;">
+                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop" alt="Chef Julian B." style="width:50px; height:50px; border-radius:50%; object-fit:cover; border:2px solid var(--secondary-color);">
+                <div style="position:absolute; bottom:-2px; right:-2px; background:var(--secondary-color); color:#fff; border-radius:50%; width:20px; height:20px; display:flex; align-items:center; justify-content:center;">
+                  <i data-lucide="user-check" style="width:11px; height:11px;"></i>
+                </div>
+              </div>
+              <div style="text-align:left;">
+                <p style="font-weight:700; margin:0; font-size:1rem; color:#ffffff;">Chef Julian B.</p>
+                <p style="font-size:0.85rem; opacity:0.8; margin:0; color:#efefef;">Commercial Client</p>
+              </div>
+            </div>
+          </div>
+          <div class="community-card fade-in">
+            <i data-lucide="quote" style="width:32px; height:32px; color:var(--secondary-color); opacity:0.8; margin-bottom:1rem;"></i>
+            <p style="font-style:italic; font-size:1.05rem; line-height:1.6; margin-bottom:1.5rem;">"Extremely professional packing materials and GPS tracking kept us updated every step of our interstate move."</p>
+            <div style="display:flex; align-items:center; gap:0.85rem; margin-top:auto;">
+              <div style="position:relative;">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop" alt="David M." style="width:50px; height:50px; border-radius:50%; object-fit:cover; border:2px solid var(--secondary-color);">
+                <div style="position:absolute; bottom:-2px; right:-2px; background:var(--secondary-color); color:#fff; border-radius:50%; width:20px; height:20px; display:flex; align-items:center; justify-content:center;">
+                  <i data-lucide="user-check" style="width:11px; height:11px;"></i>
+                </div>
+              </div>
+              <div style="text-align:left;">
+                <p style="font-weight:700; margin:0; font-size:1rem; color:#ffffff;">David M.</p>
+                <p style="font-size:0.85rem; opacity:0.8; margin:0; color:#efefef;">Interstate Client</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -301,7 +396,7 @@
     <section class="container" style="padding: 3rem 2rem;">
       <div
         style="background-image:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1501556466850-7c9fa1fccb4c?q=80&w=1920&auto=format&fit=crop'); background-size:cover; background-position:center; background-attachment:fixed; padding:6rem 2rem; border-radius:var(--border-radius); text-align:center; color:#fff;"
-        class="fade-in">
+        class="cta-banner-box fade-in">
         <h2 style="font-family:var(--font-heading); font-size:3rem; margin-bottom:1.5rem;">Begin Your Relocation Journey</h2>
         <p style="font-size:1.2rem; margin-bottom:3rem; max-width:600px; margin-left:auto; margin-right:auto;">Book your shifting today and experience a hassle-free transition to your new home.</p>
         <a href="subscription.html" class="btn btn-primary" style="font-size:1.1rem; padding:0 2.5rem;">Get Shifting Quote</a>
