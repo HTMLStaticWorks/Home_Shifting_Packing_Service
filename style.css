@@ -141,8 +141,7 @@ h6 {
 
 /* Card Hover Heading Text Visibility Fix for Light Mode */
 .card:hover h1, .card:hover h2, .card:hover h3, .card:hover h4, .card:hover h5, .card:hover h6,
-.flavor-profile-card:hover h1, .flavor-profile-card:hover h2, .flavor-profile-card:hover h3, .flavor-profile-card:hover h4, .flavor-profile-card:hover h5, .flavor-profile-card:hover h6,
-.dash-box:hover h1, .dash-box:hover h2, .dash-box:hover h3, .dash-box:hover h4, .dash-box:hover h5, .dash-box:hover h6 {
+.flavor-profile-card:hover h1, .flavor-profile-card:hover h2, .flavor-profile-card:hover h3, .flavor-profile-card:hover h4, .flavor-profile-card:hover h5, .flavor-profile-card:hover h6 {
   color: #ffffff !important;
 }
 

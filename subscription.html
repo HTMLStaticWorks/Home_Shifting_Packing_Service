@@ -26,6 +26,10 @@
     .chevron { transition: transform 0.3s ease; }
     .accordion-item.active .chevron { transform: rotate(180deg); }
 
+    .subscription-section .product-card {
+      text-align: center;
+    }
+
     .plan-features {
       display: inline-block;
       text-align: left;
@@ -55,12 +59,27 @@
         padding: 1rem 0 !important;
         width: 100% !important;
       }
-      .subscription-section .product-card {
+      .subscription-section .product-card,
+      .subscription-section .product-card:nth-child(odd):last-child,
+      .product-grid .product-card,
+      .product-grid .product-card:nth-child(odd):last-child {
         width: 100% !important;
         max-width: 100% !important;
+        grid-column: auto !important;
         transform: none !important;
         padding: 2.5rem 1.5rem !important;
-        margin-bottom: 0 !important;
+        margin: 0 !important;
+        text-align: center !important;
+      }
+      .subscription-section .product-card h3,
+      .subscription-section .product-card .plan-price,
+      .subscription-section .product-card p {
+        text-align: center !important;
+      }
+      .subscription-section .plan-features {
+        display: inline-block !important;
+        text-align: left !important;
+        margin: 0 auto 2rem !important;
       }
     }
     @media (max-width: 600px) {
@@ -68,8 +87,12 @@
         padding-left: 1rem !important;
         padding-right: 1rem !important;
       }
-      .subscription-section .product-card {
+      .subscription-section .product-card,
+      .subscription-section .product-card:nth-child(odd):last-child,
+      .product-grid .product-card,
+      .product-grid .product-card:nth-child(odd):last-child {
         padding: 2rem 1.25rem !important;
+        text-align: center !important;
       }
     }
   </style>
